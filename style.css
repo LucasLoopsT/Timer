@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+
+body {  
+  font-family: 'Viga', sans-serif;
+  position: relative;
+  background: none;
+  min-width: 200px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hide {
+  display: none !important;
+}
+
+#modal{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  min-width: 200px;
+  max-width: 500px;
+  inset: 0;
+  margin: 0 auto;
+  background-color: #6cf3d5;
+  border-radius: 25px;
+}
+
+#closeModal{
+  width: 100%;
+  text-align: end;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+label{
+  font-size: 30px;  
+  font-weight: 800;
+  margin: 0px 0;
+}
+
+input{
+  border-radius: 8px;
+  border: black 2px solid;
+  padding: 15px;
+  font-size: 20px;
+  width: 180px;
+}
+
+h2, span{
+  font-size: 50px;
+}
+
+#buttons{
+  margin: 0 auto;
+  width: 180px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #00b4cc;
+}
+
+button{
+  width: 80px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #005f6b;
+  border: black solid 2px;
+
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  
+  transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #f8f5c1;
+    color: #1a1f1e;
+    cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes openSetting {
+0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeSetting {
+0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toNight {
+  0% {
+    background-color: #fff;
+    color: #000;   
+  }
+  100% {
+    background-color: #000511;
+    color: #fff;   
+  }
+}
+
+@keyframes toEarly {
+  0% {
+    background-color: #fff;
+    color: #000;   
+  }
+  100% {
+    background-color: #000511;
+    color: #fff;   
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imgs/timer.svg" type="image/svg+xml">
+    <title>Timer</title>
+</head>
+
+<body>
+    <header>
+        <button id="lua" onclick="toggleView()">🌙</button>
+        <button id="sol" class="hide" onclick="toggleView()">☀️</button>
+    </header>
+    <main>
+        <div id="modal" class="center hide">
+            <span id="closeModal" onclick="closeSetting()">x</span>
+            <div id="formHours" class="column">
+                <label for="inputHours">Quantos minutos?</label>
+                <input type="number" id="inputHours" autofocus>
+                <button onclick="settingHours()">V</button>
+            </div>
+            <div id="formSeconds" class="hide column">
+                <label for="inputSeconds">Quantos segundos?</label>
+                <input type="number" id="inputSeconds" autofocus>
+                <button onclick="settingSeconds()">V</button>
+            </div>
+        </div>
+        <div id="timer" class="center">
+            <h2 id="mins">25</h2>
+            <span>:</span>
+            <h2 id="secs">00</h2>
+        </div>
+        <div id="buttons" class="center">
+            <button id="play_btn" onclick="playTimer()">▶︎</button>
+            <button id="pause_btn" class="hide" onclick="pauseTimer()">II</button>
+            <button id="set_btn" onclick="openSetting()">⏱</button>
+            <button id="reset_btn" class="hide" onclick="resetTimer()">◼</button>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
